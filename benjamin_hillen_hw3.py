@@ -9,6 +9,18 @@ import sys
 
 year = input("Enter year: ")
 
+# Validate input
+try:
+    year = int(year)
+
+except ValueError:
+    print("Must enter a year for program to function.")
+    sys.exit(0)
+
+if (year < 0):
+    print ("Year must be a positive integer.")
+    sys.exit(0)
+
 #Report if year is a leap year or not
 if (year % 4 == 0):
     if (year % 100 == 0):
